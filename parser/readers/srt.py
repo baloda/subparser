@@ -3,8 +3,6 @@ from parser.times import Times
 from parser.constants import TIMESTAMP
 from parser.readers.base import BaseReader
 
-OVERRIDE_SEQUENCE = re.compile(r"{[^}]*}")
-BYTE_ORDER_MARK = u"\ufeff"
 
 class SRTReader(BaseReader):
 
@@ -23,8 +21,10 @@ class SRTReader(BaseReader):
                 if timestamps:
                     following_lines[-1].append(line)
 
-        following_lines = [SRTReader.prepare_text(lines) for lines in following_lines]
-        for timestamp, lines in zip(timestamps[0:5], following_lines[0:5]):
-            print(timestamp, lines)
-            pass
-        return timestamps, following_lines
+        # following_lines = [SRTReader.prepare_text(lines) for lines in following_lines]
+        print(following_lines)
+        contents = [
+            SRTReader(timestamp[0], timestamp[1], SRTReader.prepare_text(lines))
+            for timestamp, lines in zip(timestamps, following_lines)
+        ]
+        return contents

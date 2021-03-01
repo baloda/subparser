@@ -20,8 +20,8 @@ class TXTReader(BaseReader):
                 timestamps.append((start, end))
                 following_lines.append([re.sub(TXT_TIMESTAMP, "", line)])
 
-        for timestamp, lines in zip(timestamps[0:5], following_lines[0:5]):
-            start, end = timestamp
-            print(start, end, lines)
-
-        return timestamps, following_lines
+        contents = [
+            TXTReader(timestamp[0], timestamp[1], lines)
+            for timestamp, lines in zip(timestamps, following_lines)
+        ]
+        return contents

@@ -7,7 +7,8 @@ from collections import namedtuple
 TXT_TIMESTAMP = "(^[\d,\s]*)"
 TIMESTAMP = re.compile(r"(\d{1,2}):(\d{2}):(\d{2})[.,](\d{2,3})")
 TIMESTAMP_WITH_FRAME = re.compile(r"(\d{1,2})\s+(\d{2})\s+(\d{2})\s+(\d{2,3})")
-
+OVERRIDE_SEQUENCE = re.compile(r"{[^}]*}")
+BYTE_ORDER_MARK = u"\ufeff"
 
 class Extensions(Enum):
     TXT = ".txt"

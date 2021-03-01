@@ -15,6 +15,7 @@ class SubtitleFile:
         self.size = None
         self.contents = None
         self.style = None
+        self.data = None
 
 
     def detect_encoding(self):
@@ -30,6 +31,13 @@ class SubtitleFile:
         return self
 
     def parse(self):
-        # d = SRTReader.parse(self.contents)
-        d = TXTReader.parse(self.contents)
-        return d
+        self.data = SRTReader.parse(self.contents)
+        # self.data = TXTReader.parse(self.contents)
+        return self.data
+
+    def print(self):
+        print("Path: %s" % (self.path))
+        print("Encoding: %s" % (self.encoding))
+        print("DATA:- ")
+        for ins in self.data:
+            print(ins.start, ins.end, ins.text)

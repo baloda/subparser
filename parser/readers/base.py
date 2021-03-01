@@ -1,4 +1,7 @@
 
+import re
+from parser.constants import BYTE_ORDER_MARK
+from parser.constants import OVERRIDE_SEQUENCE
 
 class BaseReader:
     EXT = None
@@ -9,7 +12,7 @@ class BaseReader:
     ):
         self.start = start
         self.end = end
-        self.text = end
+        self.text = text
         self.style = style
         self.layout = layout
 
