@@ -3,7 +3,7 @@
 it support txt and srt file parsing
 
 
-from subtitleparser.subtitle import SubtitleFile
+from subsparser.subtitle import SubtitleFile
 
 s = SubtitleFile(path=File Path)
 s.detect_encoding().read().parse()

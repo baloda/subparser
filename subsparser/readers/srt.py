@@ -1,7 +1,7 @@
 import re
-from subtitleparser.times import Times
-from subtitleparser.constants import TIMESTAMP
-from subtitleparser.readers.base import BaseReader
+from subsparser.times import Times
+from subsparser.constants import TIMESTAMP
+from subsparser.readers.base import BaseReader
 
 
 class SRTReader(BaseReader):

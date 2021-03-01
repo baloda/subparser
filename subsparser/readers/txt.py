@@ -1,9 +1,9 @@
 
 import re
-from subtitleparser.times import Times
-from subtitleparser.constants import TXT_TIMESTAMP
-from subtitleparser.constants import TIMESTAMP_WITH_FRAME
-from subtitleparser.readers.base import BaseReader
+from subsparser.times import Times
+from subsparser.constants import TXT_TIMESTAMP
+from subsparser.constants import TIMESTAMP_WITH_FRAME
+from subsparser.readers.base import BaseReader
 
 class TXTReader(BaseReader):
 

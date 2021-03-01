@@ -1,8 +1,8 @@
 import codecs
 from chardet import detect
-from subtitleparser.constants import Extensions
-from subtitleparser.readers.srt import SRTReader
-from subtitleparser.readers.txt import TXTReader
+from subsparser.constants import Extensions
+from subsparser.readers.srt import SRTReader
+from subsparser.readers.txt import TXTReader
 
 
 class SubtitleFile:
@@ -40,6 +40,6 @@ class SubtitleFile:
     def print(self):
         print("Path: %s" % (self.path))
         print("Encoding: %s" % (self.encoding))
-        print("DATA:- ")
+        print("DATA: ")
         for ins in self.data:
             print(ins.start, ins.end, ins.text)

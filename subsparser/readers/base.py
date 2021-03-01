@@ -1,7 +1,7 @@
 
 import re
-from subtitleparser.constants import BYTE_ORDER_MARK
-from subtitleparser.constants import OVERRIDE_SEQUENCE
+from subsparser.constants import BYTE_ORDER_MARK
+from subsparser.constants import OVERRIDE_SEQUENCE
 
 class BaseReader:
     EXT = None
