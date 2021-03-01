@@ -1,8 +1,8 @@
 import codecs
 from chardet import detect
-from parser.constants import Extensions
-from parser.readers.srt import SRTReader
-from parser.readers.txt import TXTReader
+from subtitleparser.constants import Extensions
+from subtitleparser.readers.srt import SRTReader
+from subtitleparser.readers.txt import TXTReader
 
 
 class SubtitleFile:
