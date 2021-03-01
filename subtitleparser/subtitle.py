@@ -31,8 +31,10 @@ class SubtitleFile:
         return self
 
     def parse(self):
-        self.data = SRTReader.parse(self.contents)
-        # self.data = TXTReader.parse(self.contents)
+        if self.ext == Extensions.SRT:
+            self.data = SRTReader.parse(self.contents)
+        elif self.ext == Extensions.TXT:
+            self.data = TXTReader.parse(self.contents)
         return self.data
 
     def print(self):

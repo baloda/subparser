@@ -21,8 +21,7 @@ class SRTReader(BaseReader):
                 if timestamps:
                     following_lines[-1].append(line)
 
-        # following_lines = [SRTReader.prepare_text(lines) for lines in following_lines]
-        print(following_lines)
+
         contents = [
             SRTReader(timestamp[0], timestamp[1], SRTReader.prepare_text(lines))
             for timestamp, lines in zip(timestamps, following_lines)
