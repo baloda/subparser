@@ -8,5 +8,6 @@ setup(
     description="subtitle parser for srt and text",
     author="Dharmveer Baloda",
     packages=find_packages(),
-    install_requires=[]
+    install_requires=['chardet'],
+    url="https://github.com/baloda/subparser"
 )
