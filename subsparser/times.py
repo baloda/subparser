@@ -28,3 +28,6 @@ class Times:
         ms += self.m * 60000
         ms += self.h * 3600000
         return ms
+
+    def values(self):
+        return (self.h, self.m, self.s, self.ms, self.fr)
