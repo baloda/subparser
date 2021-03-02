@@ -5,7 +5,7 @@ from subsparser.readers.srt import SRTReader
 from subsparser.readers.txt import TXTReader
 
 
-class SubtitleFile:
+class Subtitle:
 
     def __init__(self, path, encoding='utf-8', language_code=None):
         self.path = path

@@ -4,9 +4,9 @@ from setuptools import find_packages
 
 setup(
     name="subsparser",
-    version="0.0.3",
+    version="0.0.4",
     description="subtitle parser for srt and text",
     author="Dharmveer Baloda",
-    packages=["subsparser"],
+    packages=find_packages(),
     install_requires=[]
 )
