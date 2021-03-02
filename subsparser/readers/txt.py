@@ -21,7 +21,7 @@ class TXTReader(BaseReader):
                 following_lines.append([re.sub(TXT_TIMESTAMP, "", line)])
 
         contents = [
-            TXTReader(timestamp[0], timestamp[1], lines)
+            TXTReader(timestamp[0], timestamp[1], TXTReader.prepare_text(lines))
             for timestamp, lines in zip(timestamps, following_lines)
         ]
         return contents
