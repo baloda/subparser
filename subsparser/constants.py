@@ -14,6 +14,7 @@ class Extensions(Enum):
     TXT = ".txt"
     SRT = ".srt"
     WEBVTT = ".webvtt"
+    VTT = ".vtt"
     TTML = ".ttml"
     ITT = ".itt"
 

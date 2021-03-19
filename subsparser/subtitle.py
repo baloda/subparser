@@ -31,7 +31,9 @@ class Subtitle:
         return self
 
     def parse(self):
-        if self.ext == Extensions.SRT.value:
+        if (self.ext == Extensions.SRT.value) or \
+            (self.ext == Extensions.WEBVTT.value) or \
+                (self.ext == Extensions.WEBVTT.value):
             self.data = SRTReader.parse(self.contents)
         elif self.ext == Extensions.TXT.value:
             self.data = TXTReader.parse(self.contents)
